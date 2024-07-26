@@ -1,4 +1,4 @@
-<h1 align = "center">MaximumEffort - Task Manager</h1>
+<h1 align = "center">MaximumEffort</h1>
   
 ## MaximumEffort: Where Every Task Becomes an adventure! LFG 
 
