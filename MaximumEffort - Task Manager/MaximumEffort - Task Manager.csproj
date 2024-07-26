@@ -37,6 +37,7 @@
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -52,11 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom Classes\taskClass.cs" />
     <Compile Include="MaximumEffort.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MaximumEffort.Designer.cs">
       <DependentUpon>MaximumEffort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AddPage.Designer.cs">
+      <DependentUpon>AddPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\HomePage.cs">
       <SubType>Form</SubType>
@@ -68,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MaximumEffort.resx">
       <DependentUpon>MaximumEffort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AddPage.resx">
+      <DependentUpon>AddPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>

@@ -28,5 +28,12 @@ namespace MaximumEffort___Task_Manager.Pages
         {
             this.Close();
         }
+
+        private void btnaddtasknext_Click(object sender, EventArgs e)
+        {
+            AddPage addPage = new AddPage();
+            addPage.Visible = true;
+            this.Close();
+        }
     }
 }

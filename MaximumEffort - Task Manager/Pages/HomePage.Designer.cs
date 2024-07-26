@@ -180,6 +180,7 @@
             this.btnaddtasknext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnaddtasknext.TabIndex = 9;
             this.btnaddtasknext.TabStop = false;
+            this.btnaddtasknext.Click += new System.EventHandler(this.btnaddtasknext_Click);
             // 
             // guna2PictureBox6
             // 
