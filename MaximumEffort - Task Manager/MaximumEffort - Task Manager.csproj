@@ -72,6 +72,18 @@
     <Compile Include="Pages\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\UpdatePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdatePage.Designer.cs">
+      <DependentUpon>UpdatePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewPage.Designer.cs">
+      <DependentUpon>ViewPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MaximumEffort.resx">
@@ -82,6 +94,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UpdatePage.resx">
+      <DependentUpon>UpdatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ViewPage.resx">
+      <DependentUpon>ViewPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

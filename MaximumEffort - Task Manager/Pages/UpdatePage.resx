@@ -121,7 +121,7 @@
   <data name="btnexit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAA/RJREFUWEfdWEtPE1EUbqI79Wf4iBrdsyF9zExbNSa0JQGMwB+ACsUVb9iw4PU3
+        DAAACwwBP0AiyAAAA/RJREFUWEfdWEtPE1EUbqI79Wf4iBrdsyF9zExbNSa0JQGMwB+ACsUVb9iw4PU3
         3BuXbsC2dEMJlNZELZCwEUrCTMvCIeP5hgN9eGln+pCGL/kSaO+95+s9957HddxaxJzOl1GPZzTh9X6J
         K0o2Jkn5qNutg/g77vX+wndRSRrBWJ7WWqx1dDwg4x/jsnyQ8PvVzODg2WEkYuRmZgxtYcEoLC6axN/4
         7HBszMgMDBQwNqYo+zGPJ/K1s/M+L9c80KJ3Y7IciUuSmurryx9NTBhny8vWubRkYE6qt1ejH6hi57Em
@@ -141,7 +141,7 @@
         024bHI6/ZIn19mxPTWUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2CirclePictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnback.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhMgAyAIAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBAAqACwAAAAAMgAyAIUAAADG
         xsbNzc2lpaXn5+eoqKjg4OD////v7+93d3dbW1s6Ojri4uIdHR2mpqYsLCwFBQWAgIATExPx8fH4+Pga

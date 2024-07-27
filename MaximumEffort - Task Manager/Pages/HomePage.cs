@@ -35,5 +35,12 @@ namespace MaximumEffort___Task_Manager.Pages
             addPage.Visible = true;
             this.Close();
         }
+
+        private void btnupdatetasknext_Click(object sender, EventArgs e)
+        {
+            UpdatePage updatePage = new UpdatePage();
+            updatePage.Visible = true;
+            this.Visible = false;
+        }
     }
 }

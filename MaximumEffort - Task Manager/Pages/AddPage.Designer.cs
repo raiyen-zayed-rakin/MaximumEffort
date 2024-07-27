@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPage));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnexit = new System.Windows.Forms.PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lbladdtask = new System.Windows.Forms.Label();
@@ -41,10 +38,6 @@
             this.txtboxtaskid = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtboxtaskname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtboxdescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgvTaskes = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtboxsearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblsearch = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lbldate = new System.Windows.Forms.Label();
             this.txtboxdate = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblstatus = new System.Windows.Forms.Label();
@@ -52,11 +45,13 @@
             this.radioundone = new Guna.UI2.WinForms.Guna2RadioButton();
             this.btnadd = new Guna.UI2.WinForms.Guna2Button();
             this.btngroupradio = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dgvTaskList = new System.Windows.Forms.DataGridView();
+            this.btnclear = new Guna.UI2.WinForms.Guna2Button();
+            this.lblsearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTaskes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.btngroupradio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).BeginInit();
             this.SuspendLayout();
             // 
             // btnexit
@@ -91,9 +86,9 @@
             this.lbladdtask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(234)))), ((int)(((byte)(227)))));
             this.lbladdtask.Font = new System.Drawing.Font("Monospac821 BT", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbladdtask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(1)))), ((int)(((byte)(11)))));
-            this.lbladdtask.Location = new System.Drawing.Point(59, 62);
+            this.lbladdtask.Location = new System.Drawing.Point(59, 61);
             this.lbladdtask.Name = "lbladdtask";
-            this.lbladdtask.Size = new System.Drawing.Size(334, 52);
+            this.lbladdtask.Size = new System.Drawing.Size(334, 51);
             this.lbladdtask.TabIndex = 9;
             this.lbladdtask.Text = "ADD NEW TASK";
             // 
@@ -144,10 +139,12 @@
             this.txtboxtaskid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtboxtaskid.Name = "txtboxtaskid";
             this.txtboxtaskid.PasswordChar = '\0';
-            this.txtboxtaskid.PlaceholderText = "#####";
+            this.txtboxtaskid.PlaceholderText = "Auto-generated";
+            this.txtboxtaskid.ReadOnly = true;
             this.txtboxtaskid.SelectedText = "";
             this.txtboxtaskid.Size = new System.Drawing.Size(240, 34);
             this.txtboxtaskid.TabIndex = 13;
+            this.txtboxtaskid.TextChanged += new System.EventHandler(this.txtboxtaskid_TextChanged);
             // 
             // txtboxtaskname
             // 
@@ -166,7 +163,7 @@
             this.txtboxtaskname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtboxtaskname.Name = "txtboxtaskname";
             this.txtboxtaskname.PasswordChar = '\0';
-            this.txtboxtaskname.PlaceholderText = "Work";
+            this.txtboxtaskname.PlaceholderText = "Heading name";
             this.txtboxtaskname.SelectedText = "";
             this.txtboxtaskname.Size = new System.Drawing.Size(240, 34);
             this.txtboxtaskname.TabIndex = 14;
@@ -176,7 +173,7 @@
             this.txtboxdescription.Animated = true;
             this.txtboxdescription.BorderRadius = 20;
             this.txtboxdescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtboxdescription.DefaultText = "Your Description";
+            this.txtboxdescription.DefaultText = "";
             this.txtboxdescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtboxdescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtboxdescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -188,105 +185,10 @@
             this.txtboxdescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtboxdescription.Name = "txtboxdescription";
             this.txtboxdescription.PasswordChar = '\0';
-            this.txtboxdescription.PlaceholderText = "";
+            this.txtboxdescription.PlaceholderText = "Your description";
             this.txtboxdescription.SelectedText = "";
             this.txtboxdescription.Size = new System.Drawing.Size(477, 179);
             this.txtboxdescription.TabIndex = 15;
-            // 
-            // dgvTaskes
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvTaskes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTaskes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvTaskes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTaskes.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvTaskes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTaskes.Location = new System.Drawing.Point(575, 198);
-            this.dgvTaskes.Name = "dgvTaskes";
-            this.dgvTaskes.RowHeadersVisible = false;
-            this.dgvTaskes.RowHeadersWidth = 51;
-            this.dgvTaskes.RowTemplate.Height = 24;
-            this.dgvTaskes.Size = new System.Drawing.Size(553, 529);
-            this.dgvTaskes.TabIndex = 16;
-            this.dgvTaskes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvTaskes.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvTaskes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvTaskes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvTaskes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvTaskes.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvTaskes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTaskes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvTaskes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvTaskes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvTaskes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvTaskes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTaskes.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvTaskes.ThemeStyle.ReadOnly = false;
-            this.dgvTaskes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvTaskes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvTaskes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvTaskes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvTaskes.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvTaskes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTaskes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // txtboxsearch
-            // 
-            this.txtboxsearch.Animated = true;
-            this.txtboxsearch.BorderRadius = 10;
-            this.txtboxsearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtboxsearch.DefaultText = "";
-            this.txtboxsearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtboxsearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtboxsearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtboxsearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtboxsearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtboxsearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtboxsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtboxsearch.Location = new System.Drawing.Point(736, 141);
-            this.txtboxsearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtboxsearch.Name = "txtboxsearch";
-            this.txtboxsearch.PasswordChar = '\0';
-            this.txtboxsearch.PlaceholderText = "#####";
-            this.txtboxsearch.SelectedText = "";
-            this.txtboxsearch.Size = new System.Drawing.Size(348, 34);
-            this.txtboxsearch.TabIndex = 18;
-            // 
-            // lblsearch
-            // 
-            this.lblsearch.AutoSize = true;
-            this.lblsearch.Font = new System.Drawing.Font("Monospac821 BT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsearch.Location = new System.Drawing.Point(569, 141);
-            this.lblsearch.Name = "lblsearch";
-            this.lblsearch.Size = new System.Drawing.Size(168, 34);
-            this.lblsearch.TabIndex = 17;
-            this.lblsearch.Text = "Search  :";
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(1090, 141);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(38, 34);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox2.TabIndex = 19;
-            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // lbldate
             // 
@@ -383,9 +285,10 @@
             this.btnadd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(234)))), ((int)(((byte)(227)))));
             this.btnadd.Location = new System.Drawing.Point(66, 675);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(478, 52);
+            this.btnadd.Size = new System.Drawing.Size(214, 52);
             this.btnadd.TabIndex = 25;
             this.btnadd.Text = "ADD";
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btngroupradio
             // 
@@ -401,20 +304,57 @@
             this.btngroupradio.Size = new System.Drawing.Size(233, 75);
             this.btngroupradio.TabIndex = 26;
             // 
+            // dgvTaskList
+            // 
+            this.dgvTaskList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTaskList.Location = new System.Drawing.Point(575, 198);
+            this.dgvTaskList.Name = "dgvTaskList";
+            this.dgvTaskList.RowHeadersWidth = 51;
+            this.dgvTaskList.RowTemplate.Height = 24;
+            this.dgvTaskList.Size = new System.Drawing.Size(553, 529);
+            this.dgvTaskList.TabIndex = 27;
+            // 
+            // btnclear
+            // 
+            this.btnclear.BorderRadius = 20;
+            this.btnclear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnclear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnclear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnclear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnclear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnclear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(1)))), ((int)(((byte)(11)))));
+            this.btnclear.Font = new System.Drawing.Font("Monospac821 BT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(234)))), ((int)(((byte)(227)))));
+            this.btnclear.Location = new System.Drawing.Point(305, 675);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(231, 52);
+            this.btnclear.TabIndex = 28;
+            this.btnclear.Text = "CLEAR";
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
+            // 
+            // lblsearch
+            // 
+            this.lblsearch.AutoSize = true;
+            this.lblsearch.Font = new System.Drawing.Font("Monospac821 BT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsearch.Location = new System.Drawing.Point(569, 141);
+            this.lblsearch.Name = "lblsearch";
+            this.lblsearch.Size = new System.Drawing.Size(287, 34);
+            this.lblsearch.TabIndex = 17;
+            this.lblsearch.Text = "Live Task View :";
+            // 
             // AddPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(234)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(1182, 753);
+            this.Controls.Add(this.btnclear);
+            this.Controls.Add(this.dgvTaskList);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.lblstatus);
             this.Controls.Add(this.txtboxdate);
             this.Controls.Add(this.lbldate);
-            this.Controls.Add(this.guna2CirclePictureBox2);
-            this.Controls.Add(this.txtboxsearch);
             this.Controls.Add(this.lblsearch);
-            this.Controls.Add(this.dgvTaskes);
             this.Controls.Add(this.txtboxdescription);
             this.Controls.Add(this.txtboxtaskname);
             this.Controls.Add(this.txtboxtaskid);
@@ -429,12 +369,12 @@
             this.Name = "AddPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPage";
+            this.Load += new System.EventHandler(this.AddPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTaskes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.btngroupradio.ResumeLayout(false);
             this.btngroupradio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,10 +391,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtboxtaskid;
         private Guna.UI2.WinForms.Guna2TextBox txtboxtaskname;
         private Guna.UI2.WinForms.Guna2TextBox txtboxdescription;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvTaskes;
-        private Guna.UI2.WinForms.Guna2TextBox txtboxsearch;
-        private System.Windows.Forms.Label lblsearch;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private System.Windows.Forms.Label lbldate;
         private Guna.UI2.WinForms.Guna2TextBox txtboxdate;
         private System.Windows.Forms.Label lblstatus;
@@ -462,5 +398,8 @@
         private Guna.UI2.WinForms.Guna2RadioButton radioundone;
         private Guna.UI2.WinForms.Guna2Button btnadd;
         private Guna.UI2.WinForms.Guna2GroupBox btngroupradio;
+        private System.Windows.Forms.DataGridView dgvTaskList;
+        private Guna.UI2.WinForms.Guna2Button btnclear;
+        private System.Windows.Forms.Label lblsearch;
     }
 }
