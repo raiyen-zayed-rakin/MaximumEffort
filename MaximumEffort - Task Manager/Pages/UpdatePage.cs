@@ -65,6 +65,7 @@ namespace MaximumEffort___Task_Manager.Pages
         {
             //get the data from the textboxes
             //Get the value from the box 
+            tc.TaskID = Convert.ToInt32(txtboxtaskid.Text);
             tc.TaskName = txtboxtaskname.Text;
             tc.Description = txtboxdescription.Text;
             tc.Date = txtboxdate.Text;
