@@ -14,4 +14,17 @@
 ## Home Page
 <img src="pictures/ReadME/Screenshot 2024-07-27 000813.png">
 
+## Add Task Page
+<img src="pictures/ReadME/Screenshot 2024-07-27 201409.png">
+
+## Update Task Page
+<img src="pictures/ReadME/Screenshot 2024-07-27 201515.png">
+
+## View Task Page
+<img src="pictures/ReadME/Screenshot 2024-07-27 201500.png">
+
+## Delete Task Page
+<img src="pictures/ReadME/Screenshot 2024-07-27 201439.png">
+
+
 ## Basically it's all stretched. all this can be done in a single page/frame. But for learning perpose. :"3
