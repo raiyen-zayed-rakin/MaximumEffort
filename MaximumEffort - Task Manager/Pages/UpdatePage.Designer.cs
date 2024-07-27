@@ -164,9 +164,9 @@
             this.lbldate.Font = new System.Drawing.Font("Monospac821 BT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldate.Location = new System.Drawing.Point(67, 517);
             this.lbldate.Name = "lbldate";
-            this.lbldate.Size = new System.Drawing.Size(219, 34);
+            this.lbldate.Size = new System.Drawing.Size(236, 34);
             this.lbldate.TabIndex = 31;
-            this.lbldate.Text = "Task Date  :";
+            this.lbldate.Text = "Task Date   :";
             // 
             // txtboxdescription
             // 

@@ -147,7 +147,7 @@ namespace MaximumEffort___Task_Manager.Custom_Classes
                 string sql = "DELETE FROM tbl_maximumeffort WHERE TaskID = @TaskID";
                 //Creating sql command using sql and conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@ContactID", t.TaskID);
+                cmd.Parameters.AddWithValue("@TaskID", t.TaskID);
 
                 //Connection Open here
                 conn.Open();

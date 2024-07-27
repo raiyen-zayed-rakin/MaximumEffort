@@ -43,6 +43,7 @@ namespace MaximumEffort___Task_Manager.Pages
         }
         public void Clear()
         {
+            txtboxtaskid.Text = "";
             txtboxtaskname.Text = "";
             txtboxdescription.Text = "";
             txtboxdate.Text = "";

@@ -45,11 +45,11 @@
             // dgvTaskList
             // 
             this.dgvTaskList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTaskList.Location = new System.Drawing.Point(80, 205);
+            this.dgvTaskList.Location = new System.Drawing.Point(80, 199);
             this.dgvTaskList.Name = "dgvTaskList";
             this.dgvTaskList.RowHeadersWidth = 51;
             this.dgvTaskList.RowTemplate.Height = 24;
-            this.dgvTaskList.Size = new System.Drawing.Size(1048, 494);
+            this.dgvTaskList.Size = new System.Drawing.Size(1048, 290);
             this.dgvTaskList.TabIndex = 34;
             // 
             // guna2CirclePictureBox2
@@ -85,6 +85,7 @@
             this.txtboxsearch.SelectedText = "";
             this.txtboxsearch.Size = new System.Drawing.Size(836, 34);
             this.txtboxsearch.TabIndex = 32;
+            this.txtboxsearch.TextChanged += new System.EventHandler(this.txtboxsearch_TextChanged);
             // 
             // lblsearch
             // 
@@ -119,6 +120,7 @@
             this.btnexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnexit.TabIndex = 35;
             this.btnexit.TabStop = false;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click_1);
             // 
             // btnBack
             // 
@@ -150,6 +152,7 @@
             this.Name = "ViewPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewPage";
+            this.Load += new System.EventHandler(this.ViewPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnexit)).EndInit();
