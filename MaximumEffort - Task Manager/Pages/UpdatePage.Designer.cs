@@ -86,7 +86,7 @@
             this.lbladdtask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(234)))), ((int)(((byte)(227)))));
             this.lbladdtask.Font = new System.Drawing.Font("Monospac821 BT", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbladdtask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(1)))), ((int)(((byte)(11)))));
-            this.lbladdtask.Location = new System.Drawing.Point(64, 60);
+            this.lbladdtask.Location = new System.Drawing.Point(82, 60);
             this.lbladdtask.Name = "lbladdtask";
             this.lbladdtask.Size = new System.Drawing.Size(308, 51);
             this.lbladdtask.TabIndex = 10;

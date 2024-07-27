@@ -66,6 +66,12 @@
     <Compile Include="Pages\AddPage.Designer.cs">
       <DependentUpon>AddPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DeletePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\DeletePage.Designer.cs">
+      <DependentUpon>DeletePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\AddPage.resx">
       <DependentUpon>AddPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\DeletePage.resx">
+      <DependentUpon>DeletePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>

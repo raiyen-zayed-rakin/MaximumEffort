@@ -42,5 +42,19 @@ namespace MaximumEffort___Task_Manager.Pages
             updatePage.Visible = true;
             this.Visible = false;
         }
+
+        private void btndeletetasknext_Click(object sender, EventArgs e)
+        {
+            DeletePage deletePage = new DeletePage();
+            deletePage.Visible = true;
+            this.Visible = false;
+        }
+
+        private void btnviewtasknext_Click(object sender, EventArgs e)
+        {
+            ViewPage viewPage = new ViewPage();
+            viewPage.Visible = true;
+            this.Visible = false;
+        }
     }
 }

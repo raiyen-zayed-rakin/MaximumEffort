@@ -257,6 +257,7 @@
             this.btnviewtasknext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnviewtasknext.TabIndex = 15;
             this.btnviewtasknext.TabStop = false;
+            this.btnviewtasknext.Click += new System.EventHandler(this.btnviewtasknext_Click);
             // 
             // guna2PictureBox8
             // 
@@ -294,6 +295,7 @@
             this.btndeletetasknext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btndeletetasknext.TabIndex = 18;
             this.btndeletetasknext.TabStop = false;
+            this.btndeletetasknext.Click += new System.EventHandler(this.btndeletetasknext_Click);
             // 
             // HomePage
             // 

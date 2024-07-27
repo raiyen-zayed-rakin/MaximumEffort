@@ -148,6 +148,7 @@
             this.Controls.Add(this.lblviewtask);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewPage";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
