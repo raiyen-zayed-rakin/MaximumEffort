@@ -21,7 +21,7 @@ namespace MaximumEffort___Task_Manager
 
         private void btnexit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btncreator_Click(object sender, EventArgs e)

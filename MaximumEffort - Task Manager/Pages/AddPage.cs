@@ -21,7 +21,7 @@ namespace MaximumEffort___Task_Manager.Pages
         taskClass tc = new taskClass();
         private void btnexit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit(); //Dont use this.close()
         }
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)

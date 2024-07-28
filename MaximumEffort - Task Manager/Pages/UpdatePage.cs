@@ -32,7 +32,7 @@ namespace MaximumEffort___Task_Manager.Pages
 
         private void btnexit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void UpdatePage_Load(object sender, EventArgs e)

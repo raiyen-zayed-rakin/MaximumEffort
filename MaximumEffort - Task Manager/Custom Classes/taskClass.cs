@@ -41,7 +41,7 @@ namespace MaximumEffort___Task_Manager.Custom_Classes
             }
             catch(Exception e) 
             { 
-            
+                
             }
             finally
             {

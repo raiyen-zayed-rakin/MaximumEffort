@@ -93,7 +93,7 @@ namespace MaximumEffort___Task_Manager.Pages
 
         private void btnexit_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }
