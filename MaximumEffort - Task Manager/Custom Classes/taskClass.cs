@@ -162,7 +162,7 @@ namespace MaximumEffort___Task_Manager.Custom_Classes
                     isSuccess = false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
 
             }
